@@ -14,10 +14,14 @@ export class Satellite {
 		this.operational = operational;
    }
 	
-	isSpaceDebris(): boolean {
-		return true;
+   isSpaceDebris():boolean {
+	return (this.type === "Space Debris");
    }
 
-}
+   zebraStripe(array): boolean {
+    return array.indexOf(this) % 2 === 0 && this.type !== 'Space Debris';
+  }
+  }
+
 
 // TODO 3a: fix isSpaceDebris check
